@@ -1,0 +1,25 @@
+#include <winsock2.h>
+#include <ws2tcpip.h>
+#include <stdlib.h>
+#include <stdio.h>
+
+#define DEFAULT_PORT "6969"
+#define DEFAULT_BUFLEN 512
+
+int main()
+{
+	// Declare and initialize
+	WSADATA xWsaData;
+	int iResult;
+
+	/****************************************************************
+	 *                      Intializing Winsock                     *
+	 ****************************************************************/
+	iResult = WSAStartup(MAKEWORD(2, 2), &xWsaData);
+	if (iResult != 0)
+	{
+		printf("WSAStartup failed: %d\n", iResult);
+		return 1;
+	}
+	printf("Windows socket initialized successfully\n");
+}

@@ -1,0 +1,305 @@
+01:48:18 **** Incremental Build of configuration Debug for project C Server ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Server.o "..\\Server.c" 
+gcc "-LC:\\MinGW\\lib" -o "C Server.exe" Server.o -lws2_32 
+Info: Nothing to build for C Server
+Info: Nothing to build for C Server
+Info: Nothing to build for C Server
+Info: Nothing to build for C Server
+Info: Nothing to build for C Server
+01:48:44 **** Incremental Build of configuration Debug for project C Server ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Server.o "..\\Server.c" 
+gcc "-LC:\\MinGW\\lib" -o "C Server.exe" Server.o -lws2_32 
+Info: Nothing to build for C Server
+Info: Nothing to build for C Server
+Info: Nothing to build for C Server
+01:49:21 **** Incremental Build of configuration Debug for project C Server ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Server.o "..\\Server.c" 
+gcc "-LC:\\MinGW\\lib" -o "C Server.exe" Server.o -lws2_32 
+Info: Nothing to build for C Server
+02:47:26 **** Rebuild of configuration Debug for project C Client ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Client.o "..\\Client.c" 
+..\Client.c: In function 'main':
+..\Client.c:39:31: error: 'argv' undeclared (first use in this function)
+   39 |         iResult = getaddrinfo(argv[1], DEFAULT_PORT, &xAddrHints, &xAddrInfo);
+      |                               ^~~~
+..\Client.c:39:31: note: each undeclared identifier is reported only once for each function it appears in
+..\Client.c:51:46: warning: format '%ld' expects argument of type 'long int', but argument 2 has type 'int' [-Wformat=]
+   51 |                 printf("Error at socket(): %ld\n", WSAGetLastError());
+      |                                            ~~^     ~~~~~~~~~~~~~~~~~
+      |                                              |     |
+      |                                              |     int
+      |                                              long int
+      |                                            %d
+..\Client.c:86:31: warning: format '%ld' expects argument of type 'long int', but argument 2 has type 'int' [-Wformat=]
+   86 |         printf("Bytes Sent: %ld\n", iResult);
+      |                             ~~^     ~~~~~~~
+      |                               |     |
+      |                               |     int
+      |                               long int
+      |                             %d
+Info: Nothing to build for C Server
+02:48:07 **** Incremental Build of configuration Debug for project C Client ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Client.o "..\\Client.c" 
+..\Client.c: In function 'main':
+..\Client.c:51:46: warning: format '%ld' expects argument of type 'long int', but argument 2 has type 'int' [-Wformat=]
+   51 |                 printf("Error at socket(): %ld\n", WSAGetLastError());
+      |                                            ~~^     ~~~~~~~~~~~~~~~~~
+      |                                              |     |
+      |                                              |     int
+      |                                              long int
+      |                                            %d
+..\Client.c:86:31: warning: format '%ld' expects argument of type 'long int', but argument 2 has type 'int' [-Wformat=]
+   86 |         printf("Bytes Sent: %ld\n", iResult);
+      |                             ~~^     ~~~~~~~
+      |                               |     |
+      |                               |     int
+      |                               long int
+      |                             %d
+gcc -o "C Client.exe" Client.o 
+C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: Client.o: in function `main':
+D:/Career/C Language/C Server Eclipse/C Client/Debug/../Client.c:22:(.text+0xb6): undefined reference to `__imp_WSAStartup'
+C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Career/C Language/C Server Eclipse/C Client/Debug/../Client.c:39:(.text+0x162): undefined reference to `__imp_getaddrinfo'
+C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Career/C Language/C Server Eclipse/C Client/Debug/../Client.c:43:(.text+0x191): undefined reference to `__imp_WSACleanup'
+C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Career/C Language/C Server Eclipse/C Client/Debug/../Client.c:48:(.text+0x1c7): undefined reference to `__imp_socket'
+C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Career/C Language/C Server Eclipse/C Client/Debug/../Client.c:51:(.text+0x1e1): undefined reference to `__imp_WSAGetLastError'
+C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Career/C Language/C Server Eclipse/C Client/Debug/../Client.c:52:(.text+0x205): undefined reference to `__imp_freeaddrinfo'
+C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Career/C Language/C Server Eclipse/C Client/Debug/../Client.c:53:(.text+0x20e): undefined reference to `__imp_WSACleanup'
+C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Career/C Language/C Server Eclipse/C Client/Debug/../Client.c:58:(.text+0x246): undefined reference to `__imp_connect'
+C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Career/C Language/C Server Eclipse/C Client/Debug/../Client.c:60:(.text+0x268): undefined reference to `__imp_closesocket'
+C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Career/C Language/C Server Eclipse/C Client/Debug/../Client.c:68:(.text+0x286): undefined reference to `__imp_freeaddrinfo'
+C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Career/C Language/C Server Eclipse/C Client/Debug/../Client.c:72:(.text+0x2a8): undefined reference to `__imp_WSACleanup'
+C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Career/C Language/C Server Eclipse/C Client/Debug/../Client.c:77:(.text+0x2e6): undefined reference to `__imp_send'
+C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Career/C Language/C Server Eclipse/C Client/Debug/../Client.c:80:(.text+0x2fe): undefined reference to `__imp_WSAGetLastError'
+C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Career/C Language/C Server Eclipse/C Client/Debug/../Client.c:81:(.text+0x322): undefined reference to `__imp_closesocket'
+C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Career/C Language/C Server Eclipse/C Client/Debug/../Client.c:82:(.text+0x32b): undefined reference to `__imp_WSACleanup'
+C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Career/C Language/C Server Eclipse/C Client/Debug/../Client.c:90:(.text+0x364): undefined reference to `__imp_shutdown'
+C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Career/C Language/C Server Eclipse/C Client/Debug/../Client.c:92:(.text+0x37c): undefined reference to `__imp_WSAGetLastError'
+C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Career/C Language/C Server Eclipse/C Client/Debug/../Client.c:93:(.text+0x3a0): undefined reference to `__imp_closesocket'
+C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Career/C Language/C Server Eclipse/C Client/Debug/../Client.c:94:(.text+0x3a9): undefined reference to `__imp_WSACleanup'
+C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Career/C Language/C Server Eclipse/C Client/Debug/../Client.c:100:(.text+0x3d9): undefined reference to `__imp_recv'
+C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Career/C Language/C Server Eclipse/C Client/Debug/../Client.c:106:(.text+0x424): undefined reference to `__imp_WSAGetLastError'
+C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Career/C Language/C Server Eclipse/C Client/Debug/../Client.c:110:(.text+0x45a): undefined reference to `__imp_shutdown'
+C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Career/C Language/C Server Eclipse/C Client/Debug/../Client.c:112:(.text+0x472): undefined reference to `__imp_WSAGetLastError'
+C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Career/C Language/C Server Eclipse/C Client/Debug/../Client.c:113:(.text+0x496): undefined reference to `__imp_closesocket'
+C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Career/C Language/C Server Eclipse/C Client/Debug/../Client.c:114:(.text+0x49f): undefined reference to `__imp_WSACleanup'
+C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Career/C Language/C Server Eclipse/C Client/Debug/../Client.c:119:(.text+0x4b9): undefined reference to `__imp_closesocket'
+C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Career/C Language/C Server Eclipse/C Client/Debug/../Client.c:120:(.text+0x4c2): undefined reference to `__imp_WSACleanup'
+collect2.exe: error: ld returned 1 exit status
+Info: Nothing to build for C Server
+02:49:05 **** Incremental Build of configuration Debug for project C Client ****
+Info: Internal Builder is used for build
+gcc "-LC:\\MinGW\\lib" -o "C Client.exe" Client.o -lws2_32 
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client
+Info: Nothing to build for C Client
+Info: Nothing to build for C Client
+Info: Nothing to build for C Client
+Info: Nothing to build for C Server
+Info: Nothing to build for C Server
+Info: Nothing to build for C Server
+Info: Nothing to build for C Server
+Info: Nothing to build for C Server
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client
+Info: Nothing to build for C Client
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client
+Info: Nothing to build for C Client
+Info: Nothing to build for C Server
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client
+Info: Nothing to build for C Client
+Info: Nothing to build for C Client
+Info: Nothing to build for C Client
+Info: Nothing to build for C Client
+Info: Nothing to build for C Client
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client
+Info: Nothing to build for C Client
+03:17:44 **** Incremental Build of configuration Debug for project C Client ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Client.o "..\\Client.c" 
+..\Client.c: In function 'main':
+..\Client.c:51:46: warning: format '%ld' expects argument of type 'long int', but argument 2 has type 'int' [-Wformat=]
+   51 |                 printf("Error at socket(): %ld\n", WSAGetLastError());
+      |                                            ~~^     ~~~~~~~~~~~~~~~~~
+      |                                              |     |
+      |                                              |     int
+      |                                              long int
+      |                                            %d
+..\Client.c:86:31: warning: format '%ld' expects argument of type 'long int', but argument 2 has type 'int' [-Wformat=]
+   86 |         printf("Bytes Sent: %ld\n", iResult);
+      |                             ~~^     ~~~~~~~
+      |                               |     |
+      |                               |     int
+      |                               long int
+      |                             %d
+gcc "-LC:\\MinGW\\lib" -o "C Client.exe" Client.o -lws2_32 
+Info: Nothing to build for C Client
+Info: Nothing to build for C Client
+Info: Nothing to build for C Client
+Info: Nothing to build for C Client
+Info: Nothing to build for C Client
+Info: Nothing to build for C Client
+Info: Nothing to build for C Client
+Info: Nothing to build for C Client
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client
+Info: Nothing to build for C Server
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client
+Info: Nothing to build for C Client
+01:31:02 **** Incremental Build of configuration Debug for project C Client ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Client.o "..\\Client.c" 
+gcc "-LC:\\MinGW\\lib" -o "C Client.exe" Client.o -lws2_32 
+Info: Nothing to build for C Client
+Info: Nothing to build for C Server
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client
+Info: Nothing to build for C Client
+Info: Nothing to build for C Server
+Info: Nothing to build for C Server
+Info: Nothing to build for C Server
+Info: Nothing to build for C Server
+Info: Nothing to build for C Server
+Info: Nothing to build for C Server
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client
+Info: Nothing to build for C Client
+Info: Nothing to build for C Client
+01:35:58 **** Incremental Build of configuration Debug for project C Server ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Server.o "..\\Server.c" 
+gcc "-LC:\\MinGW\\lib" -o "C Server.exe" Server.o -lws2_32 
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client
+23:37:14 **** Incremental Build of configuration Debug for project C Client ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Client.o "..\\Client.c" 
+gcc "-LC:\\MinGW\\lib" -o "C Client.exe" Client.o -lws2_32 
+00:02:23 **** Incremental Build of configuration Debug for project C Server ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Server.o "..\\Server.c" 
+gcc "-LC:\\MinGW\\lib" -o "C Server.exe" Server.o -lws2_32 
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client
+Info: Nothing to build for C Client
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client
+Info: Nothing to build for C Client
+Info: Nothing to build for C Client
+Info: Nothing to build for C Client
+Info: Nothing to build for C Client
+Info: Nothing to build for C Client
+Info: Nothing to build for C Server
+Info: Nothing to build for C Server
+00:54:21 **** Incremental Build of configuration Debug for project C Client ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Client.o "..\\Client.c" 
+gcc "-LC:\\MinGW\\lib" -o "C Client.exe" Client.o -lws2_32 
+Info: Nothing to build for C Server
+Info: Nothing to build for C Server
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client
+00:55:47 **** Incremental Build of configuration Debug for project C Client ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Client.o "..\\Client.c" 
+gcc "-LC:\\MinGW\\lib" -o "C Client.exe" Client.o -lws2_32 
+00:55:48 **** Incremental Build of configuration Debug for project C Server ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Server.o "..\\Server.c" 
+gcc "-LC:\\MinGW\\lib" -o "C Server.exe" Server.o -lws2_32 
+Info: Nothing to build for C Client
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client
+Info: Nothing to build for C Server
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client
+01:00:07 **** Incremental Build of configuration Debug for project C Client ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Client.o "..\\Client.c" 
+gcc "-LC:\\MinGW\\lib" -o "C Client.exe" Client.o -lws2_32 
+Info: Nothing to build for C Server
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client
+20:50:33 **** Incremental Build of configuration Debug for project C Client ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Client.o "..\\Client.c" 
+gcc "-LC:\\MinGW\\lib" -o "C Client.exe" Client.o -lws2_32 
+20:50:36 **** Incremental Build of configuration Debug for project C Server ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Server.o "..\\Server.c" 
+gcc "-LC:\\MinGW\\lib" -o "C Server.exe" Server.o -lws2_32 
+Info: Nothing to build for C Client
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client
+21:14:49 **** Incremental Build of configuration Debug for project C Server ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Server.o "..\\Server.c" 
+gcc "-LC:\\MinGW\\lib" -o "C Server.exe" Server.o -lws2_32 
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client
+Info: Nothing to build for C Client
+Info: Nothing to build for C Client
+Info: Nothing to build for C Client
+Info: Nothing to build for C Client
+22:07:08 **** Incremental Build of configuration Debug for project C Server ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Server.o "..\\Server.c" 
+gcc "-LC:\\MinGW\\lib" -o "C Server.exe" Server.o -lws2_32 
+Info: Nothing to build for C Client
+Info: Nothing to build for C Server
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client
+Info: Nothing to build for C Client
+22:11:50 **** Incremental Build of configuration Debug for project C Server ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Server.o "..\\Server.c" 
+gcc "-LC:\\MinGW\\lib" -o "C Server.exe" Server.o -lws2_32 
+C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file C Server.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+Info: Nothing to build for C Client
+22:12:11 **** Incremental Build of configuration Debug for project C Server ****
+Info: Internal Builder is used for build
+gcc "-LC:\\MinGW\\lib" -o "C Server.exe" Server.o -lws2_32 
+C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file C Server.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+22:12:25 **** Incremental Build of configuration Debug for project C Server ****
+Info: Internal Builder is used for build
+gcc "-LC:\\MinGW\\lib" -o "C Server.exe" Server.o -lws2_32 
+Info: Nothing to build for C Client
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client
+Info: Nothing to build for C Server
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client
+22:13:06 **** Incremental Build of configuration Debug for project C Client ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Client.o "..\\Client.c" 
+gcc "-LC:\\MinGW\\lib" -o "C Client.exe" Client.o -lws2_32 
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client

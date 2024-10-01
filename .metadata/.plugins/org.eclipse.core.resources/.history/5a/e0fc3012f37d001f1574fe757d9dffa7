@@ -1,0 +1,55 @@
+#include <winsock2.h>
+#include <ws2tcpip.h>
+#include <stdlib.h>
+#include <stdio.h>
+
+#define DEFAULT_PORT "6969"
+#define DEFAULT_BUFLEN 512
+
+int main()
+{
+	// Declare and initialize
+	WSADATA xWsaData;
+	SOCKET xConnectSocket = INVALID_SOCKET;
+	struct addrinfo *xAddrInfo = NULL, xAddrHints;
+	int iResult;
+
+	/****************************************************************
+	 *                      Intializing Winsock                     *
+	 ****************************************************************/
+	iResult = WSAStartup(MAKEWORD(2, 2), &xWsaData);
+	if (iResult != 0)
+	{
+		printf("WSAStartup failed: %d\n", iResult);
+		return 1;
+	}
+	printf("Windows socket initialized successfully\n");
+
+	/****************************************************************
+	 *                  Creating a Socket for the Server            *
+	 ****************************************************************/
+	ZeroMemory( &xAddrHints, sizeof(xAddrHints) );
+	xAddrHints.ai_family = AF_UNSPEC;
+	xAddrHints.ai_socktype = SOCK_STREAM;
+	xAddrHints.ai_protocol = IPPROTO_TCP;
+
+	// Resolve the server address and port
+	iResult = getaddrinfo(argv[1], DEFAULT_PORT, &xAddrHints, &xAddrInfo);
+	if (iResult != 0)
+	{
+		printf("getaddrinfo failed: %d\n", iResult);
+		WSACleanup();
+		return 1;
+	}
+
+	// Create a SOCKET for connecting to server
+	xConnectSocket = socket(xAddrInfo->ai_family, xAddrInfo->ai_socktype, xAddrInfo->ai_protocol);
+	if (xConnectSocket == INVALID_SOCKET)
+	{
+		printf("Error at socket(): %ld\n", WSAGetLastError());
+		freeaddrinfo(xAddrInfo);
+		WSACleanup();
+		return 1;
+	}
+
+}
