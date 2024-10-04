@@ -3,8 +3,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#define DEFAULT_PORT "6969"
-#define DEFAULT_BUFLEN 512
+#define DEFAULT_PORT "80"
+#define DEFAULT_BUFLEN 2048
 
 int main()
 {
@@ -16,7 +16,7 @@ int main()
 	SOCKET xConnectSocket = INVALID_SOCKET;
 	struct addrinfo *xAddrInfo = NULL, xAddrHints;
 	int iResult, recvbuflen = DEFAULT_BUFLEN;
-	const char *pcSendBuf = "this is a test";
+	char *pcSendBuf = "GET \\ HTTP/1.1\r\nHost:google.com\r\n\r\n";
 	char cRecvBuf[DEFAULT_BUFLEN];
 
 	// Initialize Winsock
@@ -29,12 +29,12 @@ int main()
 	printf("Windows socket initialized successfully\n");
 
 	ZeroMemory( &xAddrHints, sizeof(xAddrHints) );
-	xAddrHints.ai_family = AF_UNSPEC;
+	xAddrHints.ai_family = AF_INET;
 	xAddrHints.ai_socktype = SOCK_STREAM;
 	xAddrHints.ai_protocol = IPPROTO_TCP;
 
 	// Resolve the server address and port
-	iResult = getaddrinfo("127.0.0.1", DEFAULT_PORT, &xAddrHints, &xAddrInfo);
+	iResult = getaddrinfo("142.250.191.78", DEFAULT_PORT, &xAddrHints, &xAddrInfo);
 	if (iResult != 0)
 	{
 		printf("getaddrinfo failed: %d\n", iResult);
@@ -55,7 +55,7 @@ int main()
 	printf("Socket created successfully\n");
 
 	// Connect to server.
-	iResult = connect( xConnectSocket, xAddrInfo->ai_addr, (int)xAddrInfo->ai_addrlen);
+	iResult = connect(xConnectSocket, xAddrInfo->ai_addr, (int)xAddrInfo->ai_addrlen);
 	if (iResult == SOCKET_ERROR) {
 		closesocket(xConnectSocket);
 		xConnectSocket = INVALID_SOCKET;
@@ -99,6 +99,7 @@ int main()
 	// Receive data until the server closes the connection
 	do {
 		iResult = recv(xConnectSocket, cRecvBuf, recvbuflen, 0);
+		printf("Response: %s\n", cRecvBuf);
 		if (iResult > 0)
 			printf("Bytes received: %d\n", iResult);
 		else if (iResult == 0)

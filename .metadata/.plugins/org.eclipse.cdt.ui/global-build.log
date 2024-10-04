@@ -303,3 +303,311 @@ gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Client.o "..\\Client.c"
 gcc "-LC:\\MinGW\\lib" -o "C Client.exe" Client.o -lws2_32 
 Info: Nothing to build for C Server
 Info: Nothing to build for C Client
+23:25:55 **** Incremental Build of configuration Debug for project C Client ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Client.o "..\\Client.c" 
+..\Client.c: In function 'main':
+..\Client.c:26:17: error: too many arguments to function 'perror'
+   26 |                 perror("WSAStartup failed: %d\n", iResult);
+      |                 ^~~~~~
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/14.1.0/include/mm_malloc.h:27,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/14.1.0/include/xmmintrin.h:34,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/14.1.0/include/immintrin.h:31,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/14.1.0/include/x86intrin.h:32,
+                 from C:/MinGW/x86_64-w64-mingw32/include/winnt.h:1555,
+                 from C:/MinGW/x86_64-w64-mingw32/include/minwindef.h:163,
+                 from C:/MinGW/x86_64-w64-mingw32/include/windef.h:9,
+                 from C:/MinGW/x86_64-w64-mingw32/include/windows.h:69,
+                 from C:/MinGW/x86_64-w64-mingw32/include/winsock2.h:23,
+                 from ..\Client.c:1:
+C:/MinGW/x86_64-w64-mingw32/include/stdlib.h:646:16: note: declared here
+  646 |   void __cdecl perror(const char *_ErrMsg);
+      |                ^~~~~~
+..\Client.c:40:17: error: too many arguments to function 'perror'
+   40 |                 perror("getaddrinfo failed: %d\n", iResult);
+      |                 ^~~~~~
+C:/MinGW/x86_64-w64-mingw32/include/stdlib.h:646:16: note: declared here
+  646 |   void __cdecl perror(const char *_ErrMsg);
+      |                ^~~~~~
+..\Client.c:50:17: error: too many arguments to function 'perror'
+   50 |                 perror("Error at socket(): %d\n", WSAGetLastError());
+      |                 ^~~~~~
+C:/MinGW/x86_64-w64-mingw32/include/stdlib.h:646:16: note: declared here
+  646 |   void __cdecl perror(const char *_ErrMsg);
+      |                ^~~~~~
+..\Client.c:81:17: error: too many arguments to function 'perror'
+   81 |                 perror("send failed: %d\n", WSAGetLastError());
+      |                 ^~~~~~
+C:/MinGW/x86_64-w64-mingw32/include/stdlib.h:646:16: note: declared here
+  646 |   void __cdecl perror(const char *_ErrMsg);
+      |                ^~~~~~
+..\Client.c:93:17: error: too many arguments to function 'perror'
+   93 |                 perror("shutdown failed: %d\n", WSAGetLastError());
+      |                 ^~~~~~
+C:/MinGW/x86_64-w64-mingw32/include/stdlib.h:646:16: note: declared here
+  646 |   void __cdecl perror(const char *_ErrMsg);
+      |                ^~~~~~
+..\Client.c:107:25: error: too many arguments to function 'perror'
+  107 |                         perror("recv failed: %d\n", WSAGetLastError());
+      |                         ^~~~~~
+C:/MinGW/x86_64-w64-mingw32/include/stdlib.h:646:16: note: declared here
+  646 |   void __cdecl perror(const char *_ErrMsg);
+      |                ^~~~~~
+..\Client.c:113:17: error: too many arguments to function 'perror'
+  113 |                 perror("shutdown failed: %d\n", WSAGetLastError());
+      |                 ^~~~~~
+C:/MinGW/x86_64-w64-mingw32/include/stdlib.h:646:16: note: declared here
+  646 |   void __cdecl perror(const char *_ErrMsg);
+      |                ^~~~~~
+23:26:03 **** Incremental Build of configuration Debug for project C Client ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Client.o "..\\Client.c" 
+..\Client.c: In function 'main':
+..\Client.c:26:17: error: too many arguments to function 'perror'
+   26 |                 perror("WSAStartup failed: %d\n", iResult);
+      |                 ^~~~~~
+In file included from C:/MinGW/lib/gcc/x86_64-w64-mingw32/14.1.0/include/mm_malloc.h:27,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/14.1.0/include/xmmintrin.h:34,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/14.1.0/include/immintrin.h:31,
+                 from C:/MinGW/lib/gcc/x86_64-w64-mingw32/14.1.0/include/x86intrin.h:32,
+                 from C:/MinGW/x86_64-w64-mingw32/include/winnt.h:1555,
+                 from C:/MinGW/x86_64-w64-mingw32/include/minwindef.h:163,
+                 from C:/MinGW/x86_64-w64-mingw32/include/windef.h:9,
+                 from C:/MinGW/x86_64-w64-mingw32/include/windows.h:69,
+                 from C:/MinGW/x86_64-w64-mingw32/include/winsock2.h:23,
+                 from ..\Client.c:1:
+C:/MinGW/x86_64-w64-mingw32/include/stdlib.h:646:16: note: declared here
+  646 |   void __cdecl perror(const char *_ErrMsg);
+      |                ^~~~~~
+..\Client.c:40:17: error: too many arguments to function 'perror'
+   40 |                 perror("getaddrinfo failed: %d\n", iResult);
+      |                 ^~~~~~
+C:/MinGW/x86_64-w64-mingw32/include/stdlib.h:646:16: note: declared here
+  646 |   void __cdecl perror(const char *_ErrMsg);
+      |                ^~~~~~
+..\Client.c:50:17: error: too many arguments to function 'perror'
+   50 |                 perror("Error at socket(): %d\n", WSAGetLastError());
+      |                 ^~~~~~
+C:/MinGW/x86_64-w64-mingw32/include/stdlib.h:646:16: note: declared here
+  646 |   void __cdecl perror(const char *_ErrMsg);
+      |                ^~~~~~
+..\Client.c:81:17: error: too many arguments to function 'perror'
+   81 |                 perror("send failed: %d\n", WSAGetLastError());
+      |                 ^~~~~~
+C:/MinGW/x86_64-w64-mingw32/include/stdlib.h:646:16: note: declared here
+  646 |   void __cdecl perror(const char *_ErrMsg);
+      |                ^~~~~~
+..\Client.c:93:17: error: too many arguments to function 'perror'
+   93 |                 perror("shutdown failed: %d\n", WSAGetLastError());
+      |                 ^~~~~~
+C:/MinGW/x86_64-w64-mingw32/include/stdlib.h:646:16: note: declared here
+  646 |   void __cdecl perror(const char *_ErrMsg);
+      |                ^~~~~~
+..\Client.c:107:25: error: too many arguments to function 'perror'
+  107 |                         perror("recv failed: %d\n", WSAGetLastError());
+      |                         ^~~~~~
+C:/MinGW/x86_64-w64-mingw32/include/stdlib.h:646:16: note: declared here
+  646 |   void __cdecl perror(const char *_ErrMsg);
+      |                ^~~~~~
+..\Client.c:113:17: error: too many arguments to function 'perror'
+  113 |                 perror("shutdown failed: %d\n", WSAGetLastError());
+      |                 ^~~~~~
+C:/MinGW/x86_64-w64-mingw32/include/stdlib.h:646:16: note: declared here
+  646 |   void __cdecl perror(const char *_ErrMsg);
+      |                ^~~~~~
+Info: Nothing to build for C Server
+23:26:17 **** Incremental Build of configuration Debug for project C Client ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Client.o "..\\Client.c" 
+gcc "-LC:\\MinGW\\lib" -o "C Client.exe" Client.o -lws2_32 
+Info: Nothing to build for C Server
+00:28:54 **** Incremental Build of configuration Debug for project C Client ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Client.o "..\\Client.c" 
+gcc "-LC:\\MinGW\\lib" -o "C Client.exe" Client.o -lws2_32 
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client
+00:29:05 **** Incremental Build of configuration Debug for project C Server ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Server.o "..\\Server.c" 
+gcc "-LC:\\MinGW\\lib" -o "C Server.exe" Server.o -lws2_32 
+Info: Nothing to build for C Client
+01:09:54 **** Incremental Build of configuration Debug for project C Server ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Server.o "..\\Server.c" 
+..\Server.c: In function 'pvHandleRequest':
+..\Server.c:147:1: warning: control reaches end of non-void function [-Wreturn-type]
+  147 | }
+      | ^
+gcc "-LC:\\MinGW\\lib" -o "C Server.exe" Server.o -lws2_32 
+21:01:43 **** Incremental Build of configuration Debug for project C Client ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Client.o "..\\Client.c" 
+gcc "-LC:\\MinGW\\lib" -o "C Client.exe" Client.o -lws2_32 
+21:01:47 **** Incremental Build of configuration Debug for project C Server ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Server.o "..\\Server.c" 
+..\Server.c:10:1: error: parameter names (without types) in function declaration [-Wdeclaration-missing-parameter-type]
+   10 | void vHandleRequest(pvClient);
+      | ^~~~
+..\Server.c: In function 'vHandleRequest':
+..\Server.c:115:13: warning: unused variable 'iSendResult' [-Wunused-variable]
+  115 |         int iSendResult, iRecvBufLen = DEFAULT_BUFLEN, iRecvBytes;
+      |             ^~~~~~~~~~~
+Info: Nothing to build for C Client
+21:02:13 **** Incremental Build of configuration Debug for project C Server ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Server.o "..\\Server.c" 
+..\Server.c: In function 'vHandleRequest':
+..\Server.c:115:13: warning: unused variable 'iSendResult' [-Wunused-variable]
+  115 |         int iSendResult, iRecvBufLen = DEFAULT_BUFLEN, iRecvBytes;
+      |             ^~~~~~~~~~~
+gcc "-LC:\\MinGW\\lib" -o "C Server.exe" Server.o -lws2_32 
+Info: Nothing to build for C Client
+21:02:31 **** Incremental Build of configuration Debug for project C Server ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Server.o "..\\Server.c" 
+..\Server.c: In function 'vHandleRequest':
+..\Server.c:115:13: warning: unused variable 'iSendResult' [-Wunused-variable]
+  115 |         int iSendResult, iRecvBufLen = DEFAULT_BUFLEN, iRecvBytes = 0;
+      |             ^~~~~~~~~~~
+gcc "-LC:\\MinGW\\lib" -o "C Server.exe" Server.o -lws2_32 
+02:25:46 **** Incremental Build of configuration Debug for project C Client ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Client.o "..\\Client.c" 
+gcc "-LC:\\MinGW\\lib" -o "C Client.exe" Client.o -lws2_32 
+Info: Nothing to build for C Client
+02:25:50 **** Incremental Build of configuration Debug for project C Server ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Server.o "..\\Server.c" 
+..\Server.c: In function 'vHandleRequest':
+..\Server.c:116:13: warning: unused variable 'iSendResult' [-Wunused-variable]
+  116 |         int iSendResult, iRecvBufLen = DEFAULT_BUFLEN, iRecvBytes = 0;
+      |             ^~~~~~~~~~~
+gcc "-LC:\\MinGW\\lib" -o "C Server.exe" Server.o -lws2_32 
+Info: Nothing to build for C Client
+02:27:27 **** Incremental Build of configuration Debug for project C Client ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Client.o "..\\Client.c" 
+gcc "-LC:\\MinGW\\lib" -o "C Client.exe" Client.o -lws2_32 
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client
+02:29:07 **** Incremental Build of configuration Debug for project C Client ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Client.o "..\\Client.c" 
+gcc "-LC:\\MinGW\\lib" -o "C Client.exe" Client.o -lws2_32 
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client
+00:27:21 **** Incremental Build of configuration Debug for project C Client ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Client.o "..\\Client.c" 
+gcc "-LC:\\MinGW\\lib" -o "C Client.exe" Client.o -lws2_32 
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client
+01:15:58 **** Incremental Build of configuration Debug for project C Client ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Client.o "..\\Client.c" 
+gcc "-LC:\\MinGW\\lib" -o "C Client.exe" Client.o -lws2_32 
+Info: Nothing to build for C Client
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client
+01:17:00 **** Incremental Build of configuration Debug for project C Client ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Client.o "..\\Client.c" 
+gcc "-LC:\\MinGW\\lib" -o "C Client.exe" Client.o -lws2_32 
+Info: Nothing to build for C Client
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client
+01:19:44 **** Incremental Build of configuration Debug for project C Client ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Client.o "..\\Client.c" 
+gcc "-LC:\\MinGW\\lib" -o "C Client.exe" Client.o -lws2_32 
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client
+01:21:09 **** Incremental Build of configuration Debug for project C Client ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Client.o "..\\Client.c" 
+gcc "-LC:\\MinGW\\lib" -o "C Client.exe" Client.o -lws2_32 
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client
+01:22:21 **** Incremental Build of configuration Debug for project C Client ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Client.o "..\\Client.c" 
+gcc "-LC:\\MinGW\\lib" -o "C Client.exe" Client.o -lws2_32 
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client
+01:22:35 **** Incremental Build of configuration Debug for project C Client ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Client.o "..\\Client.c" 
+gcc "-LC:\\MinGW\\lib" -o "C Client.exe" Client.o -lws2_32 
+C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/14.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file C Client.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+Info: Nothing to build for C Server
+01:22:37 **** Incremental Build of configuration Debug for project C Client ****
+Info: Internal Builder is used for build
+gcc "-LC:\\MinGW\\lib" -o "C Client.exe" Client.o -lws2_32 
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client
+Info: Nothing to build for C Client
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client
+Info: Nothing to build for C Client
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client
+01:25:20 **** Incremental Build of configuration Debug for project C Client ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Client.o "..\\Client.c" 
+..\Client.c: In function 'main':
+..\Client.c:19:26: error: initialization of 'char' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+   19 |         char pcSendBuf = "GET \\ HTTP/1.1\r\nHost:www.google.com\r\n\r\n";
+      |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Client.c:78:64: error: passing argument 1 of 'strlen' makes pointer from integer without a cast [-Wint-conversion]
+   78 |         iResult = send(xConnectSocket, pcSendBuf, (int) strlen(pcSendBuf), 0);
+      |                                                                ^~~~~~~~~
+      |                                                                |
+      |                                                                char
+In file included from C:/MinGW/x86_64-w64-mingw32/include/guiddef.h:154,
+                 from C:/MinGW/x86_64-w64-mingw32/include/winnt.h:635,
+                 from C:/MinGW/x86_64-w64-mingw32/include/minwindef.h:163,
+                 from C:/MinGW/x86_64-w64-mingw32/include/windef.h:9,
+                 from C:/MinGW/x86_64-w64-mingw32/include/windows.h:69,
+                 from C:/MinGW/x86_64-w64-mingw32/include/winsock2.h:23,
+                 from ..\Client.c:1:
+C:/MinGW/x86_64-w64-mingw32/include/string.h:64:37: note: expected 'const char *' but argument is of type 'char'
+   64 |   size_t __cdecl strlen(const char *_Str);
+      |                         ~~~~~~~~~~~~^~~~
+..\Client.c:78:40: error: passing argument 2 of 'send' makes pointer from integer without a cast [-Wint-conversion]
+   78 |         iResult = send(xConnectSocket, pcSendBuf, (int) strlen(pcSendBuf), 0);
+      |                                        ^~~~~~~~~
+      |                                        |
+      |                                        char
+C:/MinGW/x86_64-w64-mingw32/include/winsock2.h:1033:60: note: expected 'const char *' but argument is of type 'char'
+ 1033 |   WINSOCK_API_LINKAGE int WSAAPI send(SOCKET s,const char *buf,int len,int flags);
+      |                                                ~~~~~~~~~~~~^~~
+Info: Nothing to build for C Server
+01:25:31 **** Incremental Build of configuration Debug for project C Client ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Client.o "..\\Client.c" 
+gcc "-LC:\\MinGW\\lib" -o "C Client.exe" Client.o -lws2_32 
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client
+01:27:20 **** Incremental Build of configuration Debug for project C Client ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Client.o "..\\Client.c" 
+gcc "-LC:\\MinGW\\lib" -o "C Client.exe" Client.o -lws2_32 
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client
+01:29:13 **** Incremental Build of configuration Debug for project C Client ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Client.o "..\\Client.c" 
+gcc "-LC:\\MinGW\\lib" -o "C Client.exe" Client.o -lws2_32 
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client
+01:29:54 **** Incremental Build of configuration Debug for project C Client ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Client.o "..\\Client.c" 
+gcc "-LC:\\MinGW\\lib" -o "C Client.exe" Client.o -lws2_32 
+Info: Nothing to build for C Server
+Info: Nothing to build for C Client

@@ -2,12 +2,13 @@
 #include <ws2tcpip.h>
 #include <stdlib.h>
 #include <stdio.h>
-//// Need to link with Ws2_32.lib
-//#pragma comment (lib, "Ws2_32.lib")
-//// #pragma comment (lib, "Mswsock.lib")
+#include <string.h>
+
 
 #define DEFAULT_PORT "6969"
 #define DEFAULT_BUFLEN 512
+
+void vHandleRequest(SOCKET xClientSocket);
 
 int main()
 {
@@ -17,8 +18,7 @@ int main()
 	WSADATA xWsaData;
 	SOCKET xListenSocket = INVALID_SOCKET, xClientSocket = INVALID_SOCKET;
 	struct addrinfo *xAddrInfo = NULL, xAddrHints;
-	int iResult, iSendResult, iRecvBufLen = DEFAULT_BUFLEN;
-	char cRecvBuf[DEFAULT_BUFLEN];
+	int iResult;
 
 	// Initialize Winsock
 	iResult = WSAStartup(MAKEWORD(2, 2), &xWsaData);
@@ -93,37 +93,6 @@ int main()
 		}
 		printf("Client socket connection accepted\n");
 
-		// Receive until the peer shuts down the connection
-		do
-		{
-			iResult = recv(xClientSocket, cRecvBuf, iRecvBufLen, 0);
-			if (iResult > 0)
-			{
-				printf("Bytes received: %d\n", iResult);
-
-				// Echo the buffer back to the sender
-				iSendResult = send(xClientSocket, cRecvBuf, iResult, 0);
-				if (iSendResult == SOCKET_ERROR)
-				{
-					printf("send failed: %d\n", WSAGetLastError());
-					closesocket(xClientSocket);
-					WSACleanup();
-					return 1;
-				}
-				printf("Bytes sent: %d\n", iSendResult);
-			}
-			else if (iResult == 0)
-			{
-				printf("Connection closing...\n");
-			}
-			else
-			{
-				printf("recv failed: %d\n", WSAGetLastError());
-				closesocket(xClientSocket);
-				WSACleanup();
-				return 1;
-			}
-		} while (iResult > 0);
 
 		// shutdown the send half of the connection since no more data will be sent
 		iResult = shutdown(xClientSocket, SD_SEND);
@@ -136,8 +105,19 @@ int main()
 		}
 	}
 
-	// cleanup
+	// Cleanup
 	closesocket(xClientSocket);
 	WSACleanup();
 	return 0;
+}
+
+void vHandleRequest(SOCKET xClientSocket)
+{
+	int iSendResult, iRecvBufLen = DEFAULT_BUFLEN, iRecvBytes = 0;
+	char cRecvBuf[DEFAULT_BUFLEN];
+	iRecvBytes = recv(xClientSocket, cRecvBuf, iRecvBufLen, 0);
+	if (iRecvBytes > 0)
+	{
+
+	}
 }
